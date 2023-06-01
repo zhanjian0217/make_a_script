@@ -6,10 +6,8 @@ notifier_path=$(which terminal-notifier)
 message=$1
 currentBranch=$(git symbolic-ref --short -q HEAD)
 
-if  [ -f "$notifier_path" ] 
+if  [ ! -f "$notifier_path" ] 
 then
-  echo 'checked terminal-notifier ...... '
-else
   echo 'please install terminal-notifier from https://github.com/julienXX/terminal-notifier'
   exit
 fi
